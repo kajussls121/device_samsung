@@ -334,4 +334,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += $(COMMON_PATH)/manifest1.xml
+#DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
+    $(COMMON_PATH)/compatibility_matrix.device.xml #\
+    #$(COMMON_PATH)/compatibility_matrix.device.legacy.xml

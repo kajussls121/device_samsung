@@ -24,3 +24,12 @@ $(call inherit-product, vendor/samsung/starlte/starlte-vendor.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# APEX Flattening
+PRODUCT_ALWAYS_PRIVILEGE_MODULE_APEX_FLATTENING := true
+TARGET_FLATTEN_APEX := true
+TARGET_BUILD_APEX_FILES := false
+TARGET_USES_PREBUILT_APEX := true
+OVERRIDE_TARGET_FLATTEN_APEX := true
+PRODUCT_COMPRESSED_APEX := false
+PRODUCT_SYSTEM_PROPERTIES := ro.apex.updatable=false

@@ -1,4 +1,4 @@
-<compatibility-matrix version="1.0" type="device">
+<compatibility-matrix version="5.0" type="framework">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -7,7 +7,6 @@
             <name>IDevicesFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@7.1::IDevicesFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
@@ -17,7 +16,6 @@
             <name>IEffectsFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@7.0::IEffectsFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -27,7 +25,6 @@
             <name>IBluetoothHci</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IBluetoothHci/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
@@ -37,13 +34,15 @@
             <name>ICameraProvider</name>
             <instance>legacy/0</instance>
         </interface>
-        <fqname>@2.5::ICameraProvider/legacy/0</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
-        <fqname>@1.2::ICryptoFactory/widevine</fqname>
-        <fqname>@1.2::IDrmFactory/widevine</fqname>
+        <version>1.3</version>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>clearkey</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -53,7 +52,6 @@
             <name>IGatekeeper</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IGatekeeper/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gnss</name>
@@ -63,8 +61,6 @@
             <name>IGnss</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IGnss/default</fqname>
-        <fqname>@2.0::IGnss/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.allocator</name>
@@ -74,7 +70,6 @@
             <name>IAllocator</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::IAllocator/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.composer</name>
@@ -84,14 +79,10 @@
             <name>IComposer</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.2::IComposer/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
         <transport arch="32+64">passthrough</transport>
-        <fqname>@2.1::IMapper/default</fqname>
-        <fqname>@3.0::IMapper/default</fqname>
-        <fqname>@4.0::IMapper/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
@@ -101,7 +92,6 @@
             <name>IKeymasterDevice</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -115,8 +105,6 @@
             <name>IOmxStore</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IOmx/default</fqname>
-        <fqname>@1.0::IOmxStore/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.memtrack</name>
@@ -126,7 +114,6 @@
             <name>IMemtrack</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IMemtrack/default</fqname>
     </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.radio</name>
@@ -135,10 +122,6 @@
     <hal format="hidl" override="true">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
-        <fqname>@1.2::ISap/slot1</fqname>
-        <fqname>@1.2::ISap/slot2</fqname>
-        <fqname>@1.4::IRadio/slot1</fqname>
-        <fqname>@1.4::IRadio/slot2</fqname>
     </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.radio.config</name>
@@ -148,7 +131,6 @@
             <name>IRadioConfig</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IRadioConfig/default</fqname>
     </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.radio.deprecated</name>
@@ -162,7 +144,6 @@
             <name>ISensors</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ISensors/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
@@ -172,7 +153,6 @@
             <name>ISoundTriggerHw</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.3::ISoundTriggerHw/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.biometrics.fingerprint</name>
@@ -182,7 +162,6 @@
             <name>ISehBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::ISehBiometricsFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.bluetooth</name>
@@ -192,7 +171,6 @@
             <name>ISehBluetooth</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::ISehBluetooth/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.gnss</name>
@@ -202,7 +180,6 @@
             <name>ISehGnss</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::ISehGnss/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.health</name>
@@ -212,7 +189,6 @@
             <name>ISehHealth</name>
             <instance>sehhealth</instance>
         </interface>
-        <fqname>@1.0::ISehHealth/sehhealth</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.light</name>
@@ -222,7 +198,6 @@
             <name>ISehLight</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::ISehLight/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.nfc</name>
@@ -232,7 +207,6 @@
             <name>ISehNfc</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::ISehNfc/default</fqname>
     </hal>
     <hal format="hidl" override="true">
         <name>vendor.samsung.hardware.radio</name>
@@ -247,8 +221,6 @@
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
-        <fqname>@2.1::ISehRadio/slot1</fqname>
-        <fqname>@2.1::ISehRadio/slot2</fqname>
     </hal>
     <hal format="hidl" override="true">
         <name>vendor.samsung.hardware.radio.bridge</name>
@@ -263,8 +235,6 @@
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
-        <fqname>@2.0::ISehBridge/slot1</fqname>
-        <fqname>@2.0::ISehBridge/slot2</fqname>
     </hal>
     <hal format="hidl" override="true">
         <name>vendor.samsung.hardware.radio.channel</name>
@@ -281,10 +251,6 @@
             <instance>imsd</instance>
             <instance>imsd2</instance>
         </interface>
-        <fqname>@2.0::ISehChannel/epdgd</fqname>
-        <fqname>@2.0::ISehChannel/epdgd2</fqname>
-        <fqname>@2.0::ISehChannel/imsd</fqname>
-        <fqname>@2.0::ISehChannel/imsd2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.security.widevine.keyprovisioning</name>
@@ -294,7 +260,6 @@
             <name>ISehWidevineKeyProvisioning</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ISehWidevineKeyProvisioning/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.snap</name>
@@ -304,7 +269,6 @@
             <name>ISehSnap</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::ISehSnap/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.tlc.ucm</name>
@@ -314,7 +278,6 @@
             <name>ISehUcm</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::ISehUcm/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.vibrator</name>
@@ -324,7 +287,6 @@
             <name>ISehVibrator</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.1::ISehVibrator/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.wifi</name>
@@ -334,7 +296,6 @@
             <name>ISehWifi</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.1::ISehWifi/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.wifi.hostapd</name>
@@ -344,7 +305,6 @@
             <name>ISehHostapd</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.1::ISehHostapd/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.wifi.supplicant</name>
@@ -354,7 +314,6 @@
             <name>ISehSupplicant</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::ISehSupplicant/default</fqname>
     </hal>
     <hal format="hidl" override="true">
         <name>vendor.samsung_slsi.hardware.radio</name>
@@ -368,7 +327,6 @@
             <name>ITee</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ITee/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.trustonic.teeregistry</name>
@@ -378,7 +336,6 @@
             <name>ITeeRegistry</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ITeeRegistry/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.lineage.touch</name>
@@ -413,6 +370,164 @@
         </interface>
         <interface>
             <name>ISunlightEnhancement</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lineage.fastcharge</name>
+        <version>1.0</version>
+        <transport>hwbinder</transport>
+        <interface>
+            <name>IFastCharge</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.3</version>
+        <interface>
+            <name>IBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.bluetooth.audio</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IBluetoothAudioProviderFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.cas</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMediaCasService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.health</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IHealth</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.thermal</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IThermal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.usb</name>
+        <transport>hwbinder</transport>
+        <version>1.3</version>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.wifi.hostapd</name>
+        <transport>hwbinder</transport>
+        <version>1.3</version>
+        <interface>
+            <name>IHostapd</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.wifi.supplicant</name>
+        <transport>hwbinder</transport>
+        <version>1.4</version>
+        <interface>
+            <name>ISupplicant</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.lineage.health</name>
+        <interface>
+            <name>IChargingControl</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <interface>
+            <name>IFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.bluetooth.audio</name>
+        <interface>
+            <name>IBluetoothAudioProviderFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.cas</name>
+        <interface>
+            <name>IMediaCasService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.drm</name>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>clearkey</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.health</name>
+        <interface>
+            <name>IHealth</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.thermal</name>
+        <interface>
+            <name>IThermal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.usb</name>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.wifi.hostapd</name>
+        <interface>
+            <name>IHostapd</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.wifi.supplicant</name>
+        <interface>
+            <name>ISupplicant</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.lineage.health</name>
+        <interface>
+            <name>IChargingControl</name>
             <instance>default</instance>
         </interface>
     </hal>

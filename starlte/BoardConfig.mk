@@ -22,8 +22,7 @@ include vendor/samsung/starlte/BoardConfigVendor.mk
 DEVICE_PATH := device/samsung/starlte
 
 # APEX image
-DEXPREOPT_GENERATE_APEX_IMAGE := true
-
+DEXPREOPT_GENERATE_APEX_IMAGE := false
 
 TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 
